@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/first_BT.dir/second_bt.cpp.o  -o first_BT  -Wl,-rpath,/usr/local/lib /usr/local/lib/libbehaviortree_cpp.so -lpthread -ldl -lcurses /usr/lib/x86_64-linux-gnu/libform.so 

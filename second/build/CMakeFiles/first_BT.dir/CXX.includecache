@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/gxf/share/bt/my_BehaviorTree/second/second_bt.cpp
+behaviortree_cpp/bt_factory.h
+/home/gxf/share/bt/my_BehaviorTree/second/behaviortree_cpp/bt_factory.h
+behaviortree_cpp/loggers/bt_cout_logger.h
+/home/gxf/share/bt/my_BehaviorTree/second/behaviortree_cpp/loggers/bt_cout_logger.h
+behaviortree_cpp/loggers/bt_file_logger.h
+/home/gxf/share/bt/my_BehaviorTree/second/behaviortree_cpp/loggers/bt_file_logger.h
+
