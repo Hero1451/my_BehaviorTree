@@ -1,3 +1,0 @@
-/home/gxf/share/bt/my_BehaviorTree/second/build/CMakeFiles/rebuild_cache.dir
-/home/gxf/share/bt/my_BehaviorTree/second/build/CMakeFiles/edit_cache.dir
-/home/gxf/share/bt/my_BehaviorTree/second/build/CMakeFiles/second_Bt.dir
