@@ -149,8 +149,8 @@ int main()
 
   auto tree = factory.createTreeFromText(xml_text);
 
-  StdCoutLogger logger_cout(tree);
-  FileLogger logger_file(tree, "bt_trace.fbl");
+  // StdCoutLogger logger_cout(tree);
+  // FileLogger logger_file(tree, "bt_trace.fbl");
 
   // Here, instead of tree.tickWhileRunning(),
   // we prefer our own loop.
@@ -167,7 +167,7 @@ int main()
     // do NOT use other sleep functions!
     // Small sleep time is OK, here we use a large one only to
     // have less messages on the console.
-    tree.sleep(std::chrono::milliseconds(1000));
+    tree.sleep(std::chrono::milliseconds(100));
 
     std::cout << "--- ticking\n";
     status = tree.tickOnce();

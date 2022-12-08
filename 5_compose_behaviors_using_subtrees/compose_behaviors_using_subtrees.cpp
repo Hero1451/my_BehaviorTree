@@ -2,7 +2,7 @@
 #include "behaviortree_cpp/loggers/bt_cout_logger.h"
 #include "behaviortree_cpp/loggers/bt_file_logger.h"
 #include <behaviortree_cpp/action_node.h>
-//#include "dummy_nodes.h"
+#include "crossdoor_nodes.h"
 
 using namespace BT;
 static const char* xml_text = R"(
@@ -34,50 +34,50 @@ static const char* xml_text = R"(
  )";
 
 
-class CrossDoor
-{
-public:
-    void registerNodes(BT::BehaviorTreeFactory& factory);
+// class CrossDoor
+// {
+// public:
+//     void registerNodes(BT::BehaviorTreeFactory& factory);
 
-    // SUCCESS if _door_open == true
-    BT::NodeStatus isDoorClosed();
+//     // SUCCESS if _door_open == true
+//     BT::NodeStatus isDoorClosed();
 
-    // SUCCESS if _door_open == true
-    BT::NodeStatus passThroughDoor();
+//     // SUCCESS if _door_open == true
+//     BT::NodeStatus passThroughDoor();
 
-    // After 3 attempts, will open a locked door
-    BT::NodeStatus pickLock();
+//     // After 3 attempts, will open a locked door
+//     BT::NodeStatus pickLock();
 
-    // FAILURE if door locked
-    BT::NodeStatus openDoor();
+//     // FAILURE if door locked
+//     BT::NodeStatus openDoor();
 
-    // WILL always open a door
-    BT::NodeStatus smashDoor();
+//     // WILL always open a door
+//     BT::NodeStatus smashDoor();
 
-private:
-    bool _door_open   = false;
-    bool _door_locked = true;
-    int _pick_attempts = 0;
-};
+// private:
+//     bool _door_open   = false;
+//     bool _door_locked = true;
+//     int _pick_attempts = 0;
+// };
 
 // Helper method to make registering less painful for the user
-void CrossDoor::registerNodes(BT::BehaviorTreeFactory &factory)
-{
-  factory.registerSimpleCondition(
-      "IsDoorClosed", std::bind(&CrossDoor::isDoorClosed, this));
+// void CrossDoor::registerNodes(BT::BehaviorTreeFactory &factory)
+// {
+//   factory.registerSimpleCondition(
+//       "IsDoorClosed", std::bind(&CrossDoor::isDoorClosed, this));
 
-  factory.registerSimpleAction(
-      "PassThroughDoor", std::bind(&CrossDoor::passThroughDoor, this));
+//   factory.registerSimpleAction(
+//       "PassThroughDoor", std::bind(&CrossDoor::passThroughDoor, this));
 
-  factory.registerSimpleAction(
-      "OpenDoor", std::bind(&CrossDoor::openDoor, this));
+//   factory.registerSimpleAction(
+//       "OpenDoor", std::bind(&CrossDoor::openDoor, this));
 
-  factory.registerSimpleAction(
-      "PickLock", std::bind(&CrossDoor::pickLock, this));
+//   factory.registerSimpleAction(
+//       "PickLock", std::bind(&CrossDoor::pickLock, this));
 
-  factory.registerSimpleCondition(
-      "SmashDoor", std::bind(&CrossDoor::smashDoor, this));
-}
+//   factory.registerSimpleCondition(
+//       "SmashDoor", std::bind(&CrossDoor::smashDoor, this));
+// }
 
 int main()
 {
@@ -95,6 +95,9 @@ int main()
 
   // helper function to print the tree
   printTreeRecursively(tree.rootNode());
+
+  StdCoutLogger logger_cout(tree);
+  FileLogger logger_file(tree, "bt_trace.fbl");
 
   tree.tickWhileRunning();
 

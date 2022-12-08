@@ -1,4 +1,4 @@
-# Install script for directory: /home/gxf/share/bt/my_BehaviorTree/3_ports_with_generic_types
+# Install script for directory: /home/gxf/share/bt/my_BehaviorTree/6_remapping_ports_of_a_subTrees
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/gxf/share/bt/my_BehaviorTree/3_ports_with_generic_types/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/gxf/share/bt/my_BehaviorTree/6_remapping_ports_of_a_subTrees/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

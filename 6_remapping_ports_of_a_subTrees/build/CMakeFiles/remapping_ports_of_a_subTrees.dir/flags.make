@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=gnu++17
 
 CXX_DEFINES = -DZMQ_FOUND
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/home/gxf/share/bt/my_BehaviorTree/6_remapping_ports_of_a_subTrees/6_remapping_ports_of_a_subTrees 
 

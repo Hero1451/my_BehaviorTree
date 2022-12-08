@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gxf/share/bt/my_BehaviorTree/3_ports_with_generic_types
+CMAKE_SOURCE_DIR = /home/gxf/share/bt/my_BehaviorTree/6_remapping_ports_of_a_subTrees
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gxf/share/bt/my_BehaviorTree/3_ports_with_generic_types/build
+CMAKE_BINARY_DIR = /home/gxf/share/bt/my_BehaviorTree/6_remapping_ports_of_a_subTrees/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gxf/share/bt/my_BehaviorTree/3_ports_with_generic_types/build/CMakeFiles /home/gxf/share/bt/my_BehaviorTree/3_ports_with_generic_types/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gxf/share/bt/my_BehaviorTree/6_remapping_ports_of_a_subTrees/build/CMakeFiles /home/gxf/share/bt/my_BehaviorTree/6_remapping_ports_of_a_subTrees/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gxf/share/bt/my_BehaviorTree/3_ports_with_generic_types/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gxf/share/bt/my_BehaviorTree/6_remapping_ports_of_a_subTrees/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,44 +111,71 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ports_with_generic_types
+# Target rules for targets named remapping_ports_of_a_subTrees
 
 # Build rule for target.
-ports_with_generic_types: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ports_with_generic_types
-.PHONY : ports_with_generic_types
+remapping_ports_of_a_subTrees: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 remapping_ports_of_a_subTrees
+.PHONY : remapping_ports_of_a_subTrees
 
 # fast build rule for target.
-ports_with_generic_types/fast:
-	$(MAKE) -f CMakeFiles/ports_with_generic_types.dir/build.make CMakeFiles/ports_with_generic_types.dir/build
-.PHONY : ports_with_generic_types/fast
+remapping_ports_of_a_subTrees/fast:
+	$(MAKE) -f CMakeFiles/remapping_ports_of_a_subTrees.dir/build.make CMakeFiles/remapping_ports_of_a_subTrees.dir/build
+.PHONY : remapping_ports_of_a_subTrees/fast
 
-ports_with_generic_types.o: ports_with_generic_types.cpp.o
+dummy_nodes.o: dummy_nodes.cpp.o
 
-.PHONY : ports_with_generic_types.o
+.PHONY : dummy_nodes.o
 
 # target to build an object file
-ports_with_generic_types.cpp.o:
-	$(MAKE) -f CMakeFiles/ports_with_generic_types.dir/build.make CMakeFiles/ports_with_generic_types.dir/ports_with_generic_types.cpp.o
-.PHONY : ports_with_generic_types.cpp.o
+dummy_nodes.cpp.o:
+	$(MAKE) -f CMakeFiles/remapping_ports_of_a_subTrees.dir/build.make CMakeFiles/remapping_ports_of_a_subTrees.dir/dummy_nodes.cpp.o
+.PHONY : dummy_nodes.cpp.o
 
-ports_with_generic_types.i: ports_with_generic_types.cpp.i
+dummy_nodes.i: dummy_nodes.cpp.i
 
-.PHONY : ports_with_generic_types.i
+.PHONY : dummy_nodes.i
 
 # target to preprocess a source file
-ports_with_generic_types.cpp.i:
-	$(MAKE) -f CMakeFiles/ports_with_generic_types.dir/build.make CMakeFiles/ports_with_generic_types.dir/ports_with_generic_types.cpp.i
-.PHONY : ports_with_generic_types.cpp.i
+dummy_nodes.cpp.i:
+	$(MAKE) -f CMakeFiles/remapping_ports_of_a_subTrees.dir/build.make CMakeFiles/remapping_ports_of_a_subTrees.dir/dummy_nodes.cpp.i
+.PHONY : dummy_nodes.cpp.i
 
-ports_with_generic_types.s: ports_with_generic_types.cpp.s
+dummy_nodes.s: dummy_nodes.cpp.s
 
-.PHONY : ports_with_generic_types.s
+.PHONY : dummy_nodes.s
 
 # target to generate assembly for a file
-ports_with_generic_types.cpp.s:
-	$(MAKE) -f CMakeFiles/ports_with_generic_types.dir/build.make CMakeFiles/ports_with_generic_types.dir/ports_with_generic_types.cpp.s
-.PHONY : ports_with_generic_types.cpp.s
+dummy_nodes.cpp.s:
+	$(MAKE) -f CMakeFiles/remapping_ports_of_a_subTrees.dir/build.make CMakeFiles/remapping_ports_of_a_subTrees.dir/dummy_nodes.cpp.s
+.PHONY : dummy_nodes.cpp.s
+
+remapping_ports_of_a_subTrees.o: remapping_ports_of_a_subTrees.cpp.o
+
+.PHONY : remapping_ports_of_a_subTrees.o
+
+# target to build an object file
+remapping_ports_of_a_subTrees.cpp.o:
+	$(MAKE) -f CMakeFiles/remapping_ports_of_a_subTrees.dir/build.make CMakeFiles/remapping_ports_of_a_subTrees.dir/remapping_ports_of_a_subTrees.cpp.o
+.PHONY : remapping_ports_of_a_subTrees.cpp.o
+
+remapping_ports_of_a_subTrees.i: remapping_ports_of_a_subTrees.cpp.i
+
+.PHONY : remapping_ports_of_a_subTrees.i
+
+# target to preprocess a source file
+remapping_ports_of_a_subTrees.cpp.i:
+	$(MAKE) -f CMakeFiles/remapping_ports_of_a_subTrees.dir/build.make CMakeFiles/remapping_ports_of_a_subTrees.dir/remapping_ports_of_a_subTrees.cpp.i
+.PHONY : remapping_ports_of_a_subTrees.cpp.i
+
+remapping_ports_of_a_subTrees.s: remapping_ports_of_a_subTrees.cpp.s
+
+.PHONY : remapping_ports_of_a_subTrees.s
+
+# target to generate assembly for a file
+remapping_ports_of_a_subTrees.cpp.s:
+	$(MAKE) -f CMakeFiles/remapping_ports_of_a_subTrees.dir/build.make CMakeFiles/remapping_ports_of_a_subTrees.dir/remapping_ports_of_a_subTrees.cpp.s
+.PHONY : remapping_ports_of_a_subTrees.cpp.s
 
 # Help Target
 help:
@@ -158,10 +185,13 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... ports_with_generic_types"
-	@echo "... ports_with_generic_types.o"
-	@echo "... ports_with_generic_types.i"
-	@echo "... ports_with_generic_types.s"
+	@echo "... remapping_ports_of_a_subTrees"
+	@echo "... dummy_nodes.o"
+	@echo "... dummy_nodes.i"
+	@echo "... dummy_nodes.s"
+	@echo "... remapping_ports_of_a_subTrees.o"
+	@echo "... remapping_ports_of_a_subTrees.i"
+	@echo "... remapping_ports_of_a_subTrees.s"
 .PHONY : help
 
 

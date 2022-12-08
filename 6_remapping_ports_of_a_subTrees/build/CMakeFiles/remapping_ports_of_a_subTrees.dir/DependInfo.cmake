@@ -4,7 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/gxf/share/bt/my_BehaviorTree/3_ports_with_generic_types/ports_with_generic_types.cpp" "/home/gxf/share/bt/my_BehaviorTree/3_ports_with_generic_types/build/CMakeFiles/ports_with_generic_types.dir/ports_with_generic_types.cpp.o"
+  "/home/gxf/share/bt/my_BehaviorTree/6_remapping_ports_of_a_subTrees/dummy_nodes.cpp" "/home/gxf/share/bt/my_BehaviorTree/6_remapping_ports_of_a_subTrees/build/CMakeFiles/remapping_ports_of_a_subTrees.dir/dummy_nodes.cpp.o"
+  "/home/gxf/share/bt/my_BehaviorTree/6_remapping_ports_of_a_subTrees/remapping_ports_of_a_subTrees.cpp" "/home/gxf/share/bt/my_BehaviorTree/6_remapping_ports_of_a_subTrees/build/CMakeFiles/remapping_ports_of_a_subTrees.dir/remapping_ports_of_a_subTrees.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -15,6 +16,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../6_remapping_ports_of_a_subTrees"
   )
 
 # Targets to which this target links.
