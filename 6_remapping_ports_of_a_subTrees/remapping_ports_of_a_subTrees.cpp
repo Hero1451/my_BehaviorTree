@@ -3,16 +3,16 @@
 #include "behaviortree_cpp/loggers/bt_file_logger.h"
 #include <behaviortree_cpp/action_node.h>
 #include "dummy_nodes.h"
+#include "movebase_node.h"
 
-using namespace BT;
+
 static const char* xml_text = R"(
 <root BTCPP_format="4">
 
     <BehaviorTree ID="MainTree">
         <Sequence>
-            <Script script=" move_goal='1;2;3' " />
-            <SubTree ID="MoveRobot" target="{move_goal}" 
-                                    result="{move_result}" />
+            <Script code=" move_goal='1;2;3.2' " />
+            <SubTree ID="MoveRobot" target="{move_goal}" result="{move_result}" />
             <SaySomething message="{move_result}"/>
         </Sequence>
     </BehaviorTree>
@@ -21,10 +21,10 @@ static const char* xml_text = R"(
         <Fallback>
             <Sequence>
                 <MoveBase  goal="{target}"/>
-                <Script script=" result:='goal reached' " />
+                <Script code=" result:='goal reached 123' " />
             </Sequence>
             <ForceFailure>
-                <Script script=" result:='error' " />
+                <Script code=" result:='error' " />
             </ForceFailure>
         </Fallback>
     </BehaviorTree>
@@ -34,12 +34,14 @@ static const char* xml_text = R"(
 
 
 
+
 int main()
 {
+  using namespace BT;
   BT::BehaviorTreeFactory factory;
 
   factory.registerNodeType<DummyNodes::SaySomething>("SaySomething");
-  factory.registerNodeType<DummyNodes::MoveBaseAction>("MoveBase");
+  factory.registerNodeType<MoveBaseAction>("MoveBase");
 
   factory.registerBehaviorTreeFromText(xml_text);
   auto tree = factory.createTree("MainTree");

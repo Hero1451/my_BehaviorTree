@@ -6,5 +6,5 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(behaviortree_cpp)
 
-add_executable(${PROJECT_NAME} "remapping_ports_of_a_subTrees.cpp" "dummy_nodes.cpp")
+add_executable(${PROJECT_NAME} "remapping_ports_of_a_subTrees.cpp" "dummy_nodes.cpp" "movebase_node.cpp")
 target_link_libraries(${PROJECT_NAME} BT::behaviortree_cpp)
