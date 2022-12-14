@@ -5,6 +5,5 @@ CMakeFiles/use_xml_scripting.dir/dummy_nodes.cpp.o: ../dummy_nodes.cpp
 CMakeFiles/use_xml_scripting.dir/dummy_nodes.cpp.o: ../dummy_nodes.h
 
 CMakeFiles/use_xml_scripting.dir/use_xml_scripting.cpp.o: ../dummy_nodes.h
-CMakeFiles/use_xml_scripting.dir/use_xml_scripting.cpp.o: ../use_xml.xml
 CMakeFiles/use_xml_scripting.dir/use_xml_scripting.cpp.o: ../use_xml_scripting.cpp
 
