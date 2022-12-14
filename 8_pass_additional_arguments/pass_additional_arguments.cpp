@@ -94,7 +94,7 @@ int main()
 
   auto tree = factory.createTreeFromText(xml_text);
 
-  auto visitor = [](TreeNode* node) {
+  auto visitor = [](TreeNode* node) {//匿名函数
     if (auto action_B_node = dynamic_cast<Action_B*>(node))
     {
       action_B_node->initialize(69, "interesting_value");
@@ -102,8 +102,8 @@ int main()
   };
   // apply the visitor to all the nodes of the tree
   tree.applyVisitor(visitor);
-  StdCoutLogger logger_cout(tree);
-  FileLogger logger_file(tree, "bt_trace.fbl");
+//   StdCoutLogger logger_cout(tree);
+//   FileLogger logger_file(tree, "bt_trace.fbl");
 
   tree.tickWhileRunning();
 

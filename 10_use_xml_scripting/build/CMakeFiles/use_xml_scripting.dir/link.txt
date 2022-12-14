@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/use_xml_scripting.dir/use_xml_scripting.cpp.o CMakeFiles/use_xml_scripting.dir/dummy_nodes.cpp.o  -o use_xml_scripting  -Wl,-rpath,/usr/local/lib /usr/local/lib/libbehaviortree_cpp.so -lpthread -ldl -lcurses /usr/lib/x86_64-linux-gnu/libform.so 
